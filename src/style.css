@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@400;700&display=swap');
+
+*{
+    margin:0;
+    box-sizing: border-box;
+    font-family: 'Prompt', sans-serif;
+}
+
+body{
+    background-color: #efe9f4;
+}
+
+.header-container{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    background-color: #68b684;
+    padding: 20px;
+    color: #2B2D42;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.links-container{
+    display: flex;
+    justify-content: space-between;
+    width: max-content;
+    list-style: none;
+}
+
+.links-container > li{
+    margin: 10px;
+}
+
+.search-container{
+    display: flex;
+    justify-content: space-around;
+    padding: 80px;
+    background-color: whitesmoke;
+    width: 35%;
+    flex-direction: column;
+    border-radius: 40px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    color: #2B2D42;
+    margin: auto;
+    margin-top: 100px;
+}
+
+.search-bar{
+    border-radius: 20px;
+    padding: 5px;
+    margin-top: 10px;
+    color: #2B2D42;
+}
+
+.cocktails-displayer{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.cocktails-section-title{
+    margin-bottom: 40px;
+    color: #2B2D42;
+}
+
+.cocktails-container{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.cocktail-card{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    padding: 10px;
+    background-color: whitesmoke;
+    margin: 20px;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    color:#2B2D42
+}
+
+.cocktail-card > img{
+    border-radius: 15px;
+}
+
+.details-button{
+    border: transparent;
+    background-color: #95E06C;
+    width: 30%;
+    border-radius: 10px;
+    margin-top: 10px;
+}
