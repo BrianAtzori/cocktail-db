@@ -6,7 +6,6 @@ import CocktailDisplayer from "./CocktailDisplayer";
 
 export default function Header() {
   return (
-    <Router>
       <header className="header-container">
         <h1>THe C0CKT4il DB 🍹</h1>
         <ul className="links-container">
@@ -18,14 +17,5 @@ export default function Header() {
           </li>
         </ul>
       </header>
-
-      <Routes>
-        <Route path="/" element={<><SearchBar></SearchBar><CocktailDisplayer></CocktailDisplayer></>}>
-        </Route>
-
-        <Route path="/about" element={<h1> CIAO SONO L'ABOOOUUTTTT</h1>}>
-        </Route>
-      </Routes>
-    </Router>
   );
 }
