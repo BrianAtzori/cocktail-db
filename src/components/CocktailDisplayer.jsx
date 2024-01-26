@@ -10,6 +10,8 @@ export default function CocktailDisplayer() {
 
   const [drinks, setDrinks] = useState([]);
 
+  const [cocktailFilter, setCocktailFilter] = useState("")
+
   async function getDrinks() {
     axios({
       method: "get",
@@ -19,15 +21,25 @@ export default function CocktailDisplayer() {
       .catch((err) => console.log(err));
   }
 
+  function onChangeFilter(e){
+    setCocktailFilter(e.target.value)
+    if(e.target.value === ""){
+      getDrinks()
+    }
+    else{
+      setDrinks(drinks.filter(cocktail => cocktail.strDrink.includes(cocktailFilter)))
+    }
+  }
+
   
 
   useEffect(() => {
     getDrinks();
-  }, []);
+  }, [drinks]);
 
   return (
     <>
-      <SearchBar></SearchBar>
+      <SearchBar onChangeFunction ={onChangeFilter} searchValue={cocktailFilter}></SearchBar>
       <section className="cocktails-container">
         {drinks.map((drink) => {
           return (
@@ -40,6 +52,7 @@ export default function CocktailDisplayer() {
           );
         })}
       </section>
+      {drinks.length < 1 && <h2> No Cocktail found</h2>}
     </>
   );
 }
